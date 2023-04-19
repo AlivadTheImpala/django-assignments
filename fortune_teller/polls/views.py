@@ -1,5 +1,10 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 
-def index(request):
-    return HttpResponse("Hello, world. You're at the polls index.")
+def fortune_form(request):
+    name = request.POST.get("user", "")
+    return render(request, "fortune_form.html", {"name": name})
+
+
+def fortune(request):
+    return render(request, "fortune.html")
