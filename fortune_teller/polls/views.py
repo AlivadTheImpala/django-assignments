@@ -2,8 +2,7 @@ from django.shortcuts import render
 
 
 def fortune_form(request):
-    name = request.POST.get("user", "")
-    return render(request, "fortune_form.html", {"name": name})
+    return render(request, "fortune_form.html")
 
 
 def fortune(request):
